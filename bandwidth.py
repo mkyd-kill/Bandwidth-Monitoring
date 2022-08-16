@@ -1,5 +1,6 @@
 import time
 import psutil
+import subprocess
 
 last_received = psutil.net_io_counters().bytes_recv
 last_sent = psutil.net_io_counters().bytes_sent
@@ -25,3 +26,4 @@ while True:
     last_total = bytes_total
 
     time.sleep(1)
+    subprocess.call("clear")
